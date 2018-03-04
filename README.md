@@ -1,2 +1,2 @@
 # JSON
-JSON and GSON 的使用
+JSON 和 GSON 的使用
