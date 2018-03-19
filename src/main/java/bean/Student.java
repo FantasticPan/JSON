@@ -21,5 +21,6 @@ public class Student {
     private String comment;
     private String birthday;
 
+    // 生成过程中忽略
     private transient String ignore;
 }

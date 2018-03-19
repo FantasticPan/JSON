@@ -25,8 +25,11 @@ public class GsonCreateSample {
         student.setComment("这是一个注释");
         student.setIgnore("不要看见我");
 
+        // 格式化输出
         GsonBuilder gsonBuilder = new GsonBuilder();
         gsonBuilder.setPrettyPrinting();
+
+        // 解析生成过程中做一些处理
         gsonBuilder.setFieldNamingStrategy(new FieldNamingStrategy() {
             public String translateName(Field field) {
                 if (field.getName().equals("name")) {
@@ -35,7 +38,10 @@ public class GsonCreateSample {
                 return field.getName();
             }
         });
-        Gson gson = gsonBuilder.create();
+
+        //Gson gson = gsonBuilder.create();
+        //System.out.println(gson.toJson(student));
+        Gson gson = new Gson();
         System.out.println(gson.toJson(student));
     }
 }
